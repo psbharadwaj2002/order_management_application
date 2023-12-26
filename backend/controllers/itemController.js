@@ -6,7 +6,7 @@ const getItemController = async (request, response) => {
     const items = await itemModel.find();
     response.status(200).send(items);
   } catch (error) {
-    console.log(`Error => ${error.message}`);
+    response.status(400).send("error");
   }
 };
 
@@ -18,7 +18,6 @@ const addItemController = async (request, response) => {
     response.status(201).send("Item Created Successfully");
   } catch (error) {
     response.status(400).send("error");
-    console.log(`Error => ${error.message}`);
   }
 };
 // edit item
@@ -31,7 +30,6 @@ const editItemController = async (request, response) => {
     response.status(201).send("Item Updated");
   } catch (error) {
     response.status(400).send("error");
-    console.log(`Error => ${error.message}`);
   }
 };
 
@@ -43,7 +41,6 @@ const deleteItemController = async (request, response) => {
     response.status(200).json("Item Deleted");
   } catch (error) {
     response.status(400).send("error");
-    console.log(`Error => ${error.message}`);
   }
 };
 

@@ -14,7 +14,7 @@ const loginController = async (request, response) => {
       });
     }
   } catch (error) {
-    console.log(`Error => ${error.message}`);
+    response.status(400).send("error");
   }
 };
 
@@ -26,7 +26,6 @@ const registerController = async (request, response) => {
     response.status(201).send("New User Created Successfully");
   } catch (error) {
     response.status(400).send("error");
-    console.log(`Error => ${error.message}`);
   }
 };
 

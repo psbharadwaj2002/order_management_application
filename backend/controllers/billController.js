@@ -8,7 +8,6 @@ const addBillsController = async (request, response) => {
     response.status(201).send("Bill Generated Successfully");
   } catch (error) {
     response.status(400).send("error");
-    console.log(`Error => ${error.message}`);
   }
 };
 
@@ -18,7 +17,7 @@ const getBillsController = async (request, response) => {
     const bills = await billModel.find();
     response.status(200).send(bills);
   } catch (error) {
-    console.log(`Error => ${error.message}`);
+    response.status(400).send("error");
   }
 };
 

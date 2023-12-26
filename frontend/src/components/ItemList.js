@@ -1,10 +1,6 @@
 import React from "react";
 import "..//styles/styles.css";
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
+
 import { Card } from "antd";
 import { Button } from "antd";
 import { useDispatch } from "react-redux";

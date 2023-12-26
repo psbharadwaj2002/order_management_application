@@ -1,5 +1,3 @@
-import Item from "antd/es/list/Item";
-
 const initialState = {
   loading: false,
   cartItems: [], // Ensure cartItems is initialized as an array
