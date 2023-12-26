@@ -15,7 +15,7 @@ function ItemsPage() {
   const getAllItems = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8000/api/items/getItems"
+        "https://order-management-application-pv5n.onrender.com/api/items/getItems"
       );
       setItemsData(data);
     } catch (error) {}
@@ -27,9 +27,12 @@ function ItemsPage() {
 
   const handleDelete = async (record) => {
     try {
-      await axios.post("http://localhost:8000/api/items/deleteItem", {
-        itemId: record._id,
-      });
+      await axios.post(
+        "https://order-management-application-pv5n.onrender.com/api/items/deleteItem",
+        {
+          itemId: record._id,
+        }
+      );
       message.success("Item Deleted Successfully");
       getAllItems();
       setPopUpModel(false);
@@ -82,7 +85,7 @@ function ItemsPage() {
     if (editItem === null) {
       try {
         const res = await axios.post(
-          "http://localhost:8000/api/items/addItems",
+          "https://order-management-application-pv5n.onrender.com/api/items/addItems",
           value
         );
         message.success("Item added successfully");
@@ -95,7 +98,7 @@ function ItemsPage() {
     } else {
       try {
         const res = await axios.put(
-          "http://localhost:8000/api/items/editItem",
+          "https://order-management-application-pv5n.onrender.com/api/items/editItem",
           { ...value, itemId: editItem._id }
         );
         message.success("Item added successfully");

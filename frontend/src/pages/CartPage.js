@@ -103,7 +103,10 @@ function CartPage() {
         userId: JSON.parse(localStorage.getItem("auth"))._id,
       };
 
-      await axios.post("http://localhost:8000/api/bills/addBills", newObject);
+      await axios.post(
+        "https://order-management-application-pv5n.onrender.com/api/bills/addBills",
+        newObject
+      );
       message.success("Order Placed successfully");
       navigate("/bills");
     } catch (error) {

@@ -24,7 +24,7 @@ function Home() {
     const getAllItems = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:8000/api/items/getItems"
+          "https://order-management-application-pv5n.onrender.com/api/items/getItems"
         );
         setItemsData(data);
       } catch (error) {}

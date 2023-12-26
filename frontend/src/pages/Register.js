@@ -10,7 +10,10 @@ function Register() {
   const navigate = useNavigate();
   const handleSubmit = async (value) => {
     try {
-      await axios.post("http://localhost:8000/api/users/register", value);
+      await axios.post(
+        "https://order-management-application-pv5n.onrender.com/api/users/register",
+        value
+      );
       message.success("Registered successfull");
       navigate("/login");
     } catch (error) {

@@ -10,7 +10,7 @@ function Login() {
   const handleSubmit = async (value) => {
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/users/login",
+        "https://order-management-application-pv5n.onrender.com/api/users/login",
         value
       );
       message.success("User Login successfull");

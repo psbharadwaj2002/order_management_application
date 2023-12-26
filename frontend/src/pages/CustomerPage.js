@@ -9,7 +9,7 @@ function CustomerPage() {
   const getAllBills = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8000/api/bills/getBills"
+        "https://order-management-application-pv5n.onrender.com/api/bills/getBills"
       );
       setBillsData(data);
     } catch (error) {}
