@@ -27,10 +27,7 @@ function Home() {
           "http://localhost:8000/api/items/getItems"
         );
         setItemsData(data);
-        console.log(itemsData);
-      } catch (error) {
-        console.log(`Error => ${error.message}`);
-      }
+      } catch (error) {}
     };
 
     getAllItems();

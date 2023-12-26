@@ -106,11 +106,8 @@ function CartPage() {
       await axios.post("http://localhost:8000/api/bills/addBills", newObject);
       message.success("Order Placed successfully");
       navigate("/bills");
-
-      // console.log(newObject);
     } catch (error) {
       message.error("Something went wrong");
-      console.log(`Error=> ${error.message}`);
     }
   };
 

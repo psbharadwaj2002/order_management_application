@@ -18,9 +18,7 @@ function Login() {
       navigate("/");
     } catch (error) {
       message.error("Something went wrong");
-      console.log(`Error => ${error.message}`);
     }
-    console.log(value);
   };
 
   useEffect(() => {

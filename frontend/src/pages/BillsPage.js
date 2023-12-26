@@ -32,10 +32,7 @@ function BillsPage() {
         "http://localhost:8000/api/bills/getBills"
       );
       setBillsData(data);
-      console.log(billsData);
-    } catch (error) {
-      console.log(`Error => ${error.message}`);
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {
