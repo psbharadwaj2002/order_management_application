@@ -12,14 +12,14 @@ import {
 } from "@ant-design/icons";
 import { Layout, Menu, Button, theme } from "antd";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 const { Header, Sider, Content } = Layout;
 
 const DefaultLayout = ({ children }) => {
   const navigate = useNavigate();
   const { cartItems } = useSelector((state) => state.rootReducer);
   const [collapsed, setCollapsed] = useState(false);
-  const dispatch = useDispatch();
+
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();

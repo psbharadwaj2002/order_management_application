@@ -5,7 +5,7 @@ import "./styles/styles.css";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import ItemsPage from "./pages/ItemsPage";
-import DefaultLayout from "./components/DefaultLayout";
+
 import CartPage from "./pages/CartPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";

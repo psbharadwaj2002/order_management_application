@@ -1,22 +1,8 @@
 import React, { useState, useEffect } from "react";
 import DefaultLayout from "../components/DefaultLayout";
 import axios from "axios";
-import {
-  DeleteOutlined,
-  EditOutlined,
-  MinusCircleOutlined,
-  EyeOutlined,
-} from "@ant-design/icons";
-import {
-  Form,
-  Modal,
-  Button,
-  Input,
-  Select,
-  message,
-  Table,
-  columns,
-} from "antd";
+
+import { Table } from "antd";
 
 function CustomerPage() {
   const [billsData, setBillsData] = useState([]);

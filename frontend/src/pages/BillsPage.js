@@ -1,27 +1,11 @@
 import React, { useEffect, useState } from "react";
 import DefaultLayout from "../components/DefaultLayout";
 import axios from "axios";
-import {
-  Form,
-  Modal,
-  Button,
-  Input,
-  Select,
-  message,
-  Table,
-  columns,
-} from "antd";
-import { useDispatch } from "react-redux";
-import {
-  DeleteOutlined,
-  EditOutlined,
-  MinusCircleOutlined,
-  EyeOutlined,
-} from "@ant-design/icons";
-import Item from "antd/es/list/Item";
+import { Modal, Table } from "antd";
+
+import { EyeOutlined } from "@ant-design/icons";
 
 function BillsPage() {
-  const dispatch = useDispatch();
   const [billsData, setBillsData] = useState([]);
   const [popUpModel, setPopUpModel] = useState(false);
   const [selectedBill, setSelectedBill] = useState(null);
@@ -68,8 +52,6 @@ function BillsPage() {
       ),
     },
   ];
-
-  const handleSubmit = async (value) => {};
 
   return (
     <DefaultLayout>

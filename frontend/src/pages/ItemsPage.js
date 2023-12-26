@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
 import DefaultLayout from "../components/DefaultLayout";
-import { useDispatch } from "react-redux";
+
 import axios from "axios";
 import { Form, Modal, Button, Input, Select, message } from "antd";
-import {
-  DeleteOutlined,
-  EditOutlined,
-  MinusCircleOutlined,
-} from "@ant-design/icons";
+import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { Table } from "antd";
 
 function ItemsPage() {
   const [itemsData, setItemsData] = useState([]);
-  const dispatch = useDispatch();
+
   const [popUpModel, setPopUpModel] = useState(false);
   const [editItem, setEditItem] = useState(null);
 
